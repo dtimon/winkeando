@@ -1,9 +1,8 @@
 {
-  "name": "wk-player",
+  "name": "wk-product",
   "version": "0.1.0",
-  "description": "wk-player",
-  "_repository": "__https://github.com/PolymerLabs/player.git",
-  "main": "wk-player.js",
+  "description": "wk-product",
+  "main": "wk-product.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
