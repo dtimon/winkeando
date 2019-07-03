@@ -1,7 +1,27 @@
 {
-  "name": "root",
+  "name": "@winkeando/root",
   "private": false,
   "devDependencies": {
     "lerna": "^3.15.0"
-  }
+  },
+  "description": "All public components to share",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtimon/winkeando.git"
+  },
+  "keywords": [
+    "winkeando",
+    "webcomponents"
+  ],
+  "author": "David Timón Morillo-Velarde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtimon/winkeando/issues"
+  },
+  "homepage": "https://github.com/dtimon/winkeando#readme"
 }
