@@ -1,5 +1,5 @@
 {
-  "name": "wk-product",
+  "name": "@winkeando/wk-product",
   "version": "0.1.0",
   "description": "wk-product",
   "main": "wk-product.js",
