@@ -1,0 +1,36 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/wk-player.js",
+  "fragments": [
+    "src/lazy-element.js"
+  ],
+  "sources": [
+    "src/wk-player.js",
+    "manifest/**",
+    "manifest.json",
+    "package.json",
+    "index.html",
+    "src/wk-player.js",
+    "src/lazy-element.js"
+  ],
+  "extraDependencies": [
+    "bower_components/webcomponentsjs/*.js",
+    "robots.txt",
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "builds": [
+    {
+      "bundle": true,
+      "js": {
+        "minify": false,
+        "compile": "es5",
+        "transformModulesToAmd": true
+      },
+      "addServiceWorker": true,
+      "addPushManifest": true
+    }
+  ],
+  "npm": true,
+  "componentDir": "node_modules/",
+  "moduleResolution": "node"
+}
