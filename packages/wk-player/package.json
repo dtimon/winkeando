@@ -1,5 +1,5 @@
 {
-  "name": "wk-player",
+  "name": "@winkeando/wk-player",
   "version": "0.1.0",
   "description": "wk-player",
   "_repository": "__https://github.com/PolymerLabs/player.git",
