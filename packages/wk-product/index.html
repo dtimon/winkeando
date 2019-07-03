@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <!-- Register service worker if supported. -->
+  <!--
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
+  -->
+
+  <!-- Load polyfills -->
+  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer>
+  </script>
+
+  <!-- Load components via WebComponents.waitFor -->
+  <script type="module">
+    window.WebComponents = window.WebComponents || {
+      waitFor(cb) { addEventListener('WebComponentsReady', cb) }
+    }
+    WebComponents.waitFor(async () => {
+      import('./src/wk-product.js');
+    });
+  </script>
+
+  <!-- Change stuff here for your app -->
+  <meta name="description" content="wk-product">
+  <meta name="theme-color" content="#ffffff">
+  <title>start-lit-element</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="shortcut icon" href="/manifest/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+  <wk-product title="Título" desc="Descripción" summary="Resumen de todos el componente" price='{"amount":9.83, "currency": "€", "path":"https://via.placeholder.com/150"}'></wk-product>
+
+</body>

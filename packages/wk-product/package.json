@@ -1,0 +1,15 @@
+{
+  "name": "@winkeando/wk-product",
+  "version": "0.1.0",
+  "description": "wk-product",
+  "main": "wk-product.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Timón Morillo-Velarde <david.timon@gmail.com>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "latest",
+    "lit-element": "latest"
+  }
+}
