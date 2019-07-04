@@ -10,6 +10,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@webcomponents/webcomponentsjs": "latest",
+    "gsap": "^2.1.3",
     "lit-element": "latest"
   },
   "gitHead": "a17795ba66b247c823bba39a6da34da4cd26def8"
