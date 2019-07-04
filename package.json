@@ -1,5 +1,5 @@
 {
-  "name": "@winkeando/root",
+  "name": "winkeando",
   "private": false,
   "devDependencies": {
     "lerna": "^3.15.0"
