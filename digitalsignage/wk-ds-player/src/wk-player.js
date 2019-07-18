@@ -24,7 +24,7 @@ export class WkPlayer extends LitElement {
         :host { display: block; }
         :host([hidden]) { display: none; }
       </style>
-      <slot>I am wk-player: I am the brain</slot>
+      <slot>I am wk-ds-player: I am the brain</slot>
     `;
   }
 
@@ -45,7 +45,7 @@ export class WkPlayer extends LitElement {
   }
 
   _getPlayerAttributes(elPlaying) {
-    let timer = elPlaying.getAttribute('data-wk-player');
+    let timer = elPlaying.getAttribute('data-wk-ds-player');
     timer = typeof timer === 'object' ? timer : JSON.parse(String(timer));
     return timer;
   }
@@ -93,4 +93,4 @@ export class WkPlayer extends LitElement {
 
 
 // Register the element with the browser
-customElements.define('wk-player', WkPlayer);
+customElements.define('wk-ds-player', WkPlayer);

@@ -41,7 +41,7 @@ declare global {
 
   interface StencilIntrinsicElements {
     'wk-player': Components.WkPlayerAttributes;
-    'wk-product': Components.WkProductAttributes;
+    'wk-ds-product': Components.WkProductAttributes;
   }
 
 
@@ -59,12 +59,12 @@ declare global {
 
   interface HTMLElementTagNameMap {
     'wk-player': HTMLWkPlayerElement
-    'wk-product': HTMLWkProductElement
+    'wk-ds-product': HTMLWkProductElement
   }
 
   interface ElementTagNameMap {
     'wk-player': HTMLWkPlayerElement;
-    'wk-product': HTMLWkProductElement;
+    'wk-ds-product': HTMLWkProductElement;
   }
 
 

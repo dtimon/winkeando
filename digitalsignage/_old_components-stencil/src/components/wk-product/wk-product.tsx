@@ -2,8 +2,8 @@ import { Component, Prop, Element, State } from '@stencil/core';
 //import { format } from '../../utils/utils';
 
 @Component({
-  tag: 'wk-product',
-  styleUrl: 'wk-product.css',
+  tag: 'wk-ds-product',
+  styleUrl: 'wk-ds-product.css',
   shadow: true
 })
 export class WkProduct {

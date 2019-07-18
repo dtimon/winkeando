@@ -1,8 +1,8 @@
 {
-  "name": "@winkeando/wk-player",
+  "name": "@winkeando/wk-ds-player",
   "version": "0.0.1-alpha.4",
-  "description": "wk-player",
-  "main": "wk-player.js",
+  "description": "wk-ds-player",
+  "main": "wk-ds-player.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

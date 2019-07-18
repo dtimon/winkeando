@@ -1,8 +1,8 @@
 {
-  "name": "@winkeando/wk-product",
+  "name": "@winkeando/wk-ds-product",
   "version": "0.0.1-alpha.4",
-  "description": "wk-product",
-  "main": "wk-product.js",
+  "description": "wk-ds-product",
+  "main": "wk-ds-product.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
