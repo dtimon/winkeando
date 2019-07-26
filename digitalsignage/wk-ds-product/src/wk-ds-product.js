@@ -2,11 +2,15 @@
 import { LitElement, html, css } from 'lit-element';
 import { TweenLite, TimelineMax, CSSPlugin, ScrollToPlugin, Draggable } from "gsap/all";
 
+const activePluguins = [CSSPlugin];
 // Extend the LitElement base class
 class WkProduct extends LitElement {
   static get properties() {
     return {
-      fontSrc: String,
+      fontSrc: {
+        type: String,
+        atribute: 'font-src'
+      },
       font: String,
       bg: String,
       img: String,
@@ -15,6 +19,7 @@ class WkProduct extends LitElement {
       summary: String,
       price: {
         converter: {
+          atribute: false,
           fromAttribute: (value, type) => {
 
             // `value` is a string
@@ -29,26 +34,8 @@ class WkProduct extends LitElement {
 
   static get styles() {
     return css`
-
-      .image {
-        position: absolute;
-      }
-      
-      .summary {
-        position: absolute; 
-      }
-
-      .title, .desc {
-        font-family: --wk-ds-font;
-        font-size: 48px;
-        position: relative;
-        
-      }
-      .price {
-        z-index: 4;
-      }
-      .amount, .currency {
-        text-align: center
+      :host {
+        height: '1080px';
       }
     `;
   }
@@ -66,7 +53,7 @@ class WkProduct extends LitElement {
      * To create a `TemplateResult`, tag a JavaScript template literal
      * with the `html` helper function:
      */
-    console.log(this.price)
+    console.log(this.bg)
     return html`
               <link href="${this.fontSrc}" rel="stylesheet">
               <!-- template content -->
@@ -80,8 +67,7 @@ class WkProduct extends LitElement {
                 </div>
               
                 <div class="price">
-                  <span class="amount">${this.price.amount}</span>
-                  <span class="currency"> ${this.price.currency}</span>
+                  <h1 class="amount">${this.price.amount} ${this.price.currency}</h1>
                 </div>
               </div>
     `;
@@ -89,21 +75,33 @@ class WkProduct extends LitElement {
 
   firstUpdated() {
     super.firstUpdated();
-    debugger;
+    console.log(this.bg);
     this.renderRoot.host.style.fontFamily = this.font;
-    const title = this.renderRoot.querySelector('.title');
-    const desc = this.renderRoot.querySelector('.desc');
-    const summary = this.renderRoot.querySelector('.summary');
-    const price = this.renderRoot.querySelector('.price');
+
+
+    const product = this.renderRoot.querySelector('.product');
+    TweenLite.to([product], 1, { css: { backgroundImage: `url(${this.bg})` } });
+
     const image = this.renderRoot.querySelector('.image');
+    TweenLite.to([image], 2, { css: { position: 'absolute', zIndex: 1, left: '12.5%', top: '12.5%', width: "75%", height: "75%", } });
 
-    const AnimationA = TweenLite.to([summary], 2, { left: '50%', width: '100%' });
+    const summary = this.renderRoot.querySelector('.summary');
+    TweenLite.to([summary], 0, { width: "50%", height: "50%" });
 
+    TweenLite.to([summary], 3, { css: { position: 'absolute', zIndex: 1, width: "50%", height: "50%", left: '25%', top: '25%', backgroundColor: 'rgba(0,0,0,0.7)' } });
+
+    const title = this.renderRoot.querySelector('.title');
     TweenLite.to([title], 1, { left: '25%', top: '50%', });
+
+    const desc = this.renderRoot.querySelector('.desc');
     TweenLite.to([desc], 2, { left: '25%', top: '50%' });
 
-    TweenLite.to([price], 2, { left: '50%', top: 0 });
-    TweenLite.to([image], 2, { left: 0, top: 0, width: "50%", height: "100%" });
+    TweenMax.to([desc], 1, {height: '200px'});
+    TweenMax.fromTo([desc], 3, {x:400}, {x:0, ease:Linear.easeNone, repeat:-1});
+
+
+    const price = this.renderRoot.querySelector('.price');
+    TweenLite.to([price], 2, { left: '50%', top: 0, width: '20%', height: '20%', css: { position: 'absolute' } });
 
 
   }
