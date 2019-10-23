@@ -1,14 +1,12 @@
-# start-lit-element
+# wk-funny-price
 
-A simple Hello World for LitElement.
+El componente permite mostrar un precio en difernentes divisas y con diferentes animaciones
 
-https://start-lit-element.firebaseapp.com/
-
-* [Quick start](#quick-start)
+* [propeties](#properties)
 * [Detailed setup info](#detailed-setup-info)
 * [Browser compatibility and performance](#browser-compatibility-and-performance)
 
-## Quick start
+## Properties
 
 ```
 npm install -g polymer-cli
