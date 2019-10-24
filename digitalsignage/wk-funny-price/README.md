@@ -10,8 +10,8 @@ El componente permite mostrar un precio en difernentes divisas y con diferentes 
 
 ```
 npm install -g polymer-cli
-git clone https://github.com/PolymerLabs/start-lit-element
-cd start-lit-element
+git clone https://github.com/PolymerLabs/wk-funny-price
+cd wk-funny-price
 npm install
 polymer serve
 ```
@@ -27,14 +27,14 @@ polymer serve
 ### Clone this repo
 
 ```
-git clone https://github.com/PolymerLabs/start-lit-element
+git clone https://github.com/PolymerLabs/wk-funny-price
 ```
 
 ### Start a dev server
 
 ```
 npm install -g polymer-cli
-cd start-lit-element
+cd wk-funny-price
 npm install
 polymer serve
 ```
@@ -45,9 +45,9 @@ polymer serve
 
 ```html
 <!-- Change stuff here for your app -->
-<meta name="description" content="start-lit-element">
+<meta name="description" content="wk-funny-price">
 <meta name="theme-color" content="#ffffff">
-<title>start-lit-element</title>
+<title>wk-funny-price</title>
 ```
 
 2. In index.html, uncomment the service worker registration code:
@@ -65,9 +65,9 @@ polymer serve
 3. In manifest.json, update the app description, etc:
 
 ```json
-"description": "start-lit-element",
+"description": "wk-funny-price",
 "start_url": "index.html",
-"name": "start-lit-element",
+"name": "wk-funny-price",
 "short_name": "start-lit-el",
 "background_color": "#ffffff",
 "theme_color":"#ffffff",
@@ -78,7 +78,7 @@ polymer serve
 5. In polymer.json, update your shell & entrypoint if required
 
 ```
-"shell": "src/start-lit-element.js",
+"shell": "src/wk-funny-price.js",
 "entrypoint": "index.html",
 ```
 
@@ -112,14 +112,14 @@ See the [Firebase CLI Reference](https://firebase.google.com/docs/cli) for more 
 
 At the time of writing (Dec 11 2018) this app was scoring 100% on all Lighthouse audits when deployed, and was working fine on the most recent versions of Chrome, Safari, Firefox, and Edge.
 
-Let me know of any [issues](https://github.com/PolymerLabs/start-lit-element/issues).
+Let me know of any [issues](https://github.com/PolymerLabs/wk-funny-price/issues).
 
 ## Known issues
 
 (All browsers) Dynamic `import` warning:
 
 ```
-Could not resolve module specifier "require" in file "..src/start-lit-element.js".
+Could not resolve module specifier "require" in file "..src/wk-funny-price.js".
 ```
 
 See https://github.com/Polymer/tools/issues/131.
