@@ -1,0 +1,16 @@
+{
+  "name": "wk-ds-product-list",
+  "version": "1.0.0",
+  "description": "wk-ds-product-list",
+  "repository": "https://github.com/PolymerLabs/wk-ds-product-list.git",
+  "main": "wk-ds-product-list.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "The Polymer Authors",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "latest",
+    "lit-element": "latest"
+  }
+}
