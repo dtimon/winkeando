@@ -34,12 +34,12 @@
     ]
   },
   "prettier": "@open-wc/prettier-config",
-  "_husky": {
+  "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
-  "_lint-staged": {
+  "lint-staged": {
     "*.js": [
       "eslint --fix",
       "prettier --write",

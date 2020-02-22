@@ -15,12 +15,8 @@ export class WkDmWpProductsWithCoord extends LitElement {
 
   static get properties() {
     return {
-      articles: Array
+      articles: Array,
     };
-  }
-
-  constructor() {
-    super();
   }
 
   connectedCallback() {
@@ -38,35 +34,37 @@ export class WkDmWpProductsWithCoord extends LitElement {
     const urlVendors = 'https://www.winkfy.com/wp-json/wcmp/v1/vendors';
     this.articles = [];
     const headers = new Headers();
-    headers.set('Authorization', `Basic ${  btoa(`${username  }:${  password}`)}`);
+    headers.set('Authorization', `Basic ${btoa(`${username}:${password}`)}`);
 
-    const response = await fetch(
-      urlProducts,
-      {
-        method: 'GET',
-        headers
-      }
-    );
-    const products = await response.json();
+    const productsResponse = await fetch(urlProducts, {
+      method: 'GET',
+      headers,
+    });
+
+    const products = await productsResponse.json();
 
     const vendors = {};
     const articles = [];
     for (const p of products) {
       const {
-        id, name, images, permalink, price,
-        regular_price, vendor, stock_status
+        id,
+        name,
+        images,
+        permalink,
+        price,
+        regular_price: regularPrice,
+        vendor,
+        stock_status: stockStatus,
       } = p;
       if (vendor && !vendors[vendor]) {
         const urlVendor = `${urlVendors}/${vendor}`;
-        const response = await fetch(
-          urlVendor,
-          {
-            method: 'GET',
-            headers
-          }
-        );
+
+        /* eslint-disable no-await-in-loop */
+        const response = await fetch(urlVendor, {
+          method: 'GET',
+          headers,
+        });
         vendors[vendor] = await response.json();
-        vendors; debugger;
       }
 
       articles.push({
@@ -75,14 +73,14 @@ export class WkDmWpProductsWithCoord extends LitElement {
         images: images.map(i => ({
           src: i.src,
           name: i.name,
-          alt: i.alt
+          alt: i.alt,
         })),
         price: {
           actual: price,
-          regular: regular_price
+          regular: regularPrice,
         },
         permalink,
-        stock_status,
+        stockStatus,
         vendor,
       });
     }
