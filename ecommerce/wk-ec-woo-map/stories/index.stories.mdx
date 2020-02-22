@@ -1,0 +1,55 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+
+import '../wk-ec-woo-map.js';
+
+<Meta 
+  title="WkEcWooMap"
+  parameters={{
+    component: "wk-ec-woo-map",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# WkEcWooMap
+
+A component for...
+
+## Features:
+
+- a
+- b
+- ...
+
+## How to use
+
+### Installation
+
+```bash
+yarn add wk-ec-woo-map
+```
+
+```js
+import 'wk-ec-woo-map/wk-ec-woo-map.js';
+```
+
+<Preview withToolbar>
+  <Story name="Simple">
+    {html`
+      <wk-ec-woo-map></wk-ec-woo-map>
+    `}
+  </Story>
+</Preview>
+
+## API
+
+<Props of="wk-ec-woo-map" />
+
+## Variations
+
+###### Custom Title
+
+<Story name="Custom Title">
+  {html`
+    <wk-ec-woo-map .title=${'Hello World'}></wk-ec-woo-map>
+  `}
+</Story>

@@ -1,0 +1,55 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+
+import '../wc-ec-prod-hor-list.js';
+
+<Meta 
+  title="WcEcProdHorList"
+  parameters={{
+    component: "wc-ec-prod-hor-list",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# WcEcProdHorList
+
+A component for...
+
+## Features:
+
+- a
+- b
+- ...
+
+## How to use
+
+### Installation
+
+```bash
+yarn add wc-ec-prod-hor-list
+```
+
+```js
+import 'wc-ec-prod-hor-list/wc-ec-prod-hor-list.js';
+```
+
+<Preview withToolbar>
+  <Story name="Simple">
+    {html`
+      <wc-ec-prod-hor-list></wc-ec-prod-hor-list>
+    `}
+  </Story>
+</Preview>
+
+## API
+
+<Props of="wc-ec-prod-hor-list" />
+
+## Variations
+
+###### Custom Title
+
+<Story name="Custom Title">
+  {html`
+    <wc-ec-prod-hor-list .title=${'Hello World'}></wc-ec-prod-hor-list>
+  `}
+</Story>
