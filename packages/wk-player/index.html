@@ -19,39 +19,38 @@
   <!-- Load components via WebComponents.waitFor -->
   <script type="module">
     window.WebComponents = window.WebComponents || {
-      waitFor(cb) { addEventListener('WebComponentsReady', cb) }
+      waitFor(cb) { window.addEventListener('WebComponentsReady', cb) }
     }
-    WebComponents.waitFor(async () => {
-      import('./src/wk-ds-player.js');
+    window.WebComponents.waitFor(async () => {
+      import('./src/wk-player.js');
     });
   </script>
 
   <!-- Change stuff here for your app -->
-  <meta name="description" content="wk-ds-player">
+  <meta name="description" content="wk-player">
   <meta name="theme-color" content="#ffffff">
   <title>start-lit-element</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="manifest" href="./manifest.json">
-  <link rel="shortcut icon" href="/manifest/favicon.ico">
+  <!-- <link rel="manifest" href="./manifest.json"> -->
+  <!-- <link rel="shortcut icon" href="/manifest/favicon.ico"> -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="UTF-8">
 </head>
 
 <body>
 
-
-  <wk-ds-player first="Lit Element" last="'Don't call me a framework' JS">
-    <video id="my-video1" data-wk-ds-player='{"timer":20}' width="100%" height="100%" test="I am video and I want play" preload="auto"
-      poster="//vjs.zencdn.net/v/oceans.png" muted>
+  <wk-player>
+    <video id="my-video1" data-wk-options='{"timer":"2"}' width="100%" height="100%" preload="auto"
+      _poster="//vjs.zencdn.net/v/oceans.png" muted>
       <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
     </video>
-    <video id="my-video2" data-wk-ds-player='{"timer":15}' width="100%" height="100%" test="I am video and I want wait" preload="auto"
-      poster="//vjs.zencdn.net/v/oceans.png" data-setup="[object Object]" muted>
+    <video id="my-video2" data-wk-options='{"timer":"1.5"}' width="100%" height="100%" preload="auto"
+      _poster="//vjs.zencdn.net/v/oceans.png" muted>
       <source src="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_60fps_stereo_abl.mp4" type="video/mp4">
     </video>
-    <img id="my-images1" data-wk-ds-player='{"timer":5}' src="https://picsum.photos/200/300/?random" alt="Smiley face" width="100%"
+    <img id="my-images1" data-wk-options='{"timer":2}' src="https://picsum.photos/200/300/?random" width="100%"
       height="100%">
-  </wk-ds-player>
+  </wk-player>
 
 </body>
